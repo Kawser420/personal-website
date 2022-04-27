@@ -1,0 +1,117 @@
+body{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 40px;
+}
+.menu{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu a{
+    text-decoration: none;
+}
+h1{
+    font-size: 60px;
+}
+.name-highlight{
+    color: rgba(255, 0, 0, 0.637);
+}
+.half-width{
+    width: 500px;
+    float: left;
+    margin-left: 5%;
+    padding-left: 2%;
+}
+.img-size{
+    width: 500px;
+}
+.box-button{
+    background-color: rgb(255, 0, 149);
+    padding: 20px 50px;
+    text-decoration: none;
+    color: white;
+    border-radius: 7px;
+}
+h2{
+    font-size: 40px;
+}
+section{
+    padding: 70px;
+    height: 500px;
+}
+.bg-color{
+    background-color: whitesmoke;
+}
+#center-highlight{
+    text-align: center;
+}
+.shadow-highlight{
+    width: 300px;
+    float: left;
+    margin: 2%;
+    padding: 1%;
+}
+.single-highlight{
+    box-shadow: 5px 5px 20px gray;
+    padding: 1%;
+    border-radius: 7px;
+}
+#pic-area{
+    width: 300px;
+    float: left;
+    margin: 2%;
+    padding: 1%;
+}
+h3{
+    font-size: 20px;
+}
+
+.container{
+    height: auto;
+    width: 800px;
+    position: relative;
+    margin: auto;
+    padding: auto;
+}
+.container img{
+    width: 100%;
+    display: block;
+    
+}
+.left{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 50px;
+    padding: 70px;
+    color: white;
+}
+.right{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 12%;
+}
+.paragraph-center{
+    text-align: center;
+    font-size: 30px;
+}
+.footer{
+    text-align: center;
+    font-size: 40px;
+}
+.row-area{
+    padding-left: 500px;
+}
+#icon-small{
+    width: 40px;
+    padding: 10px;
+}
