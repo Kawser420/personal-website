@@ -154,6 +154,61 @@
       .btn-glow:hover {
         box-shadow: 0 0 25px rgba(79, 70, 229, 0.8);
       }
+
+      /* Theme selector styles */
+      .theme-controller {
+        display: none;
+      }
+
+      .theme-label {
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .theme-label:hover {
+        transform: scale(1.1);
+      }
+
+      /* Theme colors preview */
+      .theme-color {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 5px;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      .dark ::-webkit-scrollbar-track {
+        background: #2d3748;
+      }
+
+      .dark ::-webkit-scrollbar-thumb {
+        background: #4a5568;
+      }
+
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #718096;
+      }
     </style>
   </head>
   <body class="min-h-screen">
@@ -207,27 +262,93 @@
           </ul>
         </div>
         <div class="navbar-end">
-          <label class="swap swap-rotate">
-            <input type="checkbox" id="theme-toggle" />
-            <svg
-              class="swap-on fill-current w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
+          <!-- Theme selector dropdown -->
+          <div class="dropdown dropdown-end mr-4">
+            <label tabindex="0" class="btn btn-ghost">
+              <i class="fas fa-palette text-xl"></i>
+            </label>
+            <ul
+              tabindex="0"
+              class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-4"
             >
-              <path
-                d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
-              />
-            </svg>
-            <svg
-              class="swap-off fill-current w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
-              />
-            </svg>
-          </label>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="light">
+                  <span class="theme-color bg-blue-500"></span> Light
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="dark">
+                  <span class="theme-color bg-gray-800"></span> Dark
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="cupcake">
+                  <span class="theme-color bg-pink-300"></span> Cupcake
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="bumblebee">
+                  <span class="theme-color bg-yellow-500"></span> Bumblebee
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="emerald">
+                  <span class="theme-color bg-emerald-500"></span> Emerald
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="corporate">
+                  <span class="theme-color bg-blue-300"></span> Corporate
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="synthwave">
+                  <span class="theme-color bg-purple-500"></span> Synthwave
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="retro">
+                  <span class="theme-color bg-orange-300"></span> Retro
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="cyberpunk">
+                  <span class="theme-color bg-yellow-300"></span> Cyberpunk
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="valentine">
+                  <span class="theme-color bg-pink-400"></span> Valentine
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="halloween">
+                  <span class="theme-color bg-orange-600"></span> Halloween
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="garden">
+                  <span class="theme-color bg-green-400"></span> Garden
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="forest">
+                  <span class="theme-color bg-green-700"></span> Forest
+                </a>
+              </li>
+              <li class="border-b border-base-300">
+                <a class="theme-label" data-theme="aqua">
+                  <span class="theme-color bg-cyan-400"></span> Aqua
+                </a>
+              </li>
+              <li>
+                <a class="theme-label" data-theme="luxury">
+                  <span class="theme-color bg-amber-400"></span> Luxury
+                </a>
+              </li>
+            </ul>
+          </div>
+
           <a href="#contact" class="btn btn-primary ml-4 btn-glow">Hire Me</a>
         </div>
       </div>
@@ -1412,28 +1533,29 @@
         retina_detect: true,
       });
 
-      // Theme toggle functionality
-      const themeToggle = document.getElementById("theme-toggle");
+      // Theme functionality
       const html = document.documentElement;
+      const themeLabels = document.querySelectorAll(".theme-label");
 
       // Check for saved theme preference or respect OS preference
-      if (
-        localStorage.getItem("theme") === "dark" ||
-        (window.matchMedia("(prefers-color-scheme: dark)").matches &&
-          !localStorage.getItem("theme"))
-      ) {
-        html.setAttribute("data-theme", "dark");
-        themeToggle.checked = true;
-      }
+      const savedTheme = localStorage.getItem("theme") || "light";
+      html.setAttribute("data-theme", savedTheme);
 
-      themeToggle.addEventListener("change", function () {
-        if (this.checked) {
-          html.setAttribute("data-theme", "dark");
-          localStorage.setItem("theme", "dark");
-        } else {
-          html.setAttribute("data-theme", "light");
-          localStorage.setItem("theme", "light");
+      // Set active theme in dropdown
+      themeLabels.forEach((label) => {
+        if (label.getAttribute("data-theme") === savedTheme) {
+          label.classList.add("active");
         }
+
+        label.addEventListener("click", function () {
+          const theme = this.getAttribute("data-theme");
+          html.setAttribute("data-theme", theme);
+          localStorage.setItem("theme", theme);
+
+          // Update active state
+          themeLabels.forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+        });
       });
 
       // Scroll animations
