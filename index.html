@@ -8,7 +8,6 @@
       name="description"
       content="Professional portfolio of Muhammad Kawser, Full Stack Developer"
     />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <!-- Tailwind CSS and DaisyUI -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
@@ -61,7 +60,7 @@
       }
 
       .hero-gradient {
-        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       }
 
       .skill-bar {
@@ -121,6 +120,40 @@
         background: rgba(0, 0, 0, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
+
+      /* Particle background */
+      #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
+
+      /* Hero content should be above particles */
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Stats counter */
+      .stat {
+        transition: transform 0.3s ease;
+      }
+
+      .stat:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Custom button animations */
+      .btn-glow {
+        box-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+      }
+
+      .btn-glow:hover {
+        box-shadow: 0 0 25px rgba(79, 70, 229, 0.8);
+      }
     </style>
   </head>
   <body class="min-h-screen">
@@ -159,7 +192,7 @@
             </ul>
           </div>
           <a class="btn btn-ghost normal-case text-xl" href="#home"
-            >MK<span class="text-primary">.</span></a
+            >PERSONAL.<span class="text-primary">WEB</span></a
           >
         </div>
         <div class="navbar-center hidden lg:flex">
@@ -195,34 +228,39 @@
               />
             </svg>
           </label>
-          <a href="#contact" class="btn btn-primary ml-4">Hire Me</a>
+          <a href="#contact" class="btn btn-primary ml-4 btn-glow">Hire Me</a>
         </div>
       </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Fixed Responsiveness -->
     <section id="home" class="hero min-h-screen relative pt-16">
+      <div id="particles-js"></div>
       <div class="hero-overlay bg-opacity-60"></div>
       <div
-        class="hero-content text-center text-neutral-content flex flex-col justify-center min-h-screen"
+        class="hero-content text-center text-neutral-content flex flex-col justify-center min-h-screen px-4"
       >
         <div class="max-w-4xl mx-auto">
           <div class="typewriter mb-6">
-            <h1 class="text-5xl md:text-7xl font-bold">
-              HELLO, I'M <span class="text-primary">MUHAMMAD KAWSER</span>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
+              HELLO, I'M <span class="text-primary">KAWSER</span>
             </h1>
           </div>
-          <p class="mb-8 text-xl md:text-2xl">
+          <p class="mb-8 text-lg md:text-xl lg:text-2xl">
             A Full Stack Developer & UI/UX Designer
           </p>
           <div class="animate-bounce mb-8">
-            <div class="badge badge-primary badge-outline p-4">
+            <div class="badge badge-primary badge-outline p-3 md:p-4">
               Available for Freelance
             </div>
           </div>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#portfolio" class="btn btn-primary btn-lg">View My Work</a>
-            <a href="#contact" class="btn btn-outline btn-lg text-white"
+            <a href="#portfolio" class="btn btn-primary btn-lg btn-glow"
+              >View My Work</a
+            >
+            <a
+              href="#contact"
+              class="btn btn-outline btn-lg text-white hover:btn-glow"
               >Get In Touch</a
             >
           </div>
@@ -232,6 +270,49 @@
         <a href="#about" class="btn btn-circle btn-outline animate-bounce">
           <i class="fas fa-arrow-down"></i>
         </a>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-primary text-primary-content">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="stat text-center">
+            <div class="stat-figure text-secondary">
+              <i class="fas fa-project-diagram text-4xl"></i>
+            </div>
+            <div class="stat-title">Projects Completed</div>
+            <div class="stat-value">150+</div>
+            <div class="stat-desc">Since 2018</div>
+          </div>
+
+          <div class="stat text-center">
+            <div class="stat-figure text-secondary">
+              <i class="fas fa-users text-4xl"></i>
+            </div>
+            <div class="stat-title">Happy Clients</div>
+            <div class="stat-value">95+</div>
+            <div class="stat-desc">Around the world</div>
+          </div>
+
+          <div class="stat text-center">
+            <div class="stat-figure text-secondary">
+              <i class="fas fa-award text-4xl"></i>
+            </div>
+            <div class="stat-title">Awards Received</div>
+            <div class="stat-value">12</div>
+            <div class="stat-desc">For excellence</div>
+          </div>
+
+          <div class="stat text-center">
+            <div class="stat-figure text-secondary">
+              <i class="fas fa-clock text-4xl"></i>
+            </div>
+            <div class="stat-title">Working Hours</div>
+            <div class="stat-value">2500+</div>
+            <div class="stat-desc">Coding & Design</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -968,181 +1049,6 @@
               <a href="#slide3" class="btn btn-circle">❯</a>
             </div>
           </div>
-
-          <div id="slide3" class="carousel-item relative w-full">
-            <!-- Testimonial content for slide 3 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
-              <div class="card bg-base-100 shadow-xl">
-                <div class="card-body">
-                  <div class="flex items-center mb-4">
-                    <div class="avatar mr-4">
-                      <div class="w-12 h-12 rounded-full">
-                        <img
-                          src="https://randomuser.me/api/portraits/men/52.jpg"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <h4 class="font-bold">David Miller</h4>
-                      <p class="text-sm">Product Manager, TechGlobal</p>
-                    </div>
-                  </div>
-                  <p class="italic">
-                    "Muhammad's ability to understand our business needs and
-                    translate them into technical solutions was impressive. The
-                    website he built for us has significantly improved our
-                    online presence."
-                  </p>
-                  <div class="rating rating-md rating-half mt-4">
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="rating-hidden"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                      checked
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-14"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div class="card bg-base-100 shadow-xl">
-                <div class="card-body">
-                  <div class="flex items-center mb-4">
-                    <div class="avatar mr-4">
-                      <div class="w-12 h-12 rounded-full">
-                        <img
-                          src="https://randomuser.me/api/portraits/women/62.jpg"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <h4 class="font-bold">Emily Thompson</h4>
-                      <p class="text-sm">CEO, Digital Solutions Ltd.</p>
-                    </div>
-                  </div>
-                  <p class="italic">
-                    "I was blown away by the quality of work Muhammad delivered.
-                    He took the time to understand our vision and executed it
-                    perfectly. The website is not only beautiful but also highly
-                    functional."
-                  </p>
-                  <div class="rating rating-md rating-half mt-4">
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="rating-hidden"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                      checked
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-1"
-                    />
-                    <input
-                      type="radio"
-                      name="rating-15"
-                      class="bg-green-500 mask mask-star-2 mask-half-2"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
-            >
-              <a href="#slide2" class="btn btn-circle">❮</a>
-              <a href="#slide4" class="btn btn-circle">❯</a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -1360,32 +1266,152 @@
       </div>
     </section>
 
-    <!-- Footer --->
-    <footer class="footer footer-center p-10 bg-primary text-primary-content">
+    <!-- Enhanced Footer -->
+    <footer class="footer p-10 bg-neutral text-neutral-content">
       <div>
-        <div class="avatar">
-          <div
-            class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2"
-          >
-            <img src="images/pic1.png" />
-          </div>
-        </div>
-        <p class="font-bold text-2xl mt-4">
-          Muhammad Kawser <br />Full Stack Developer
-        </p>
-        <p>Copyright © 2025 - All rights reserved</p>
+        <span class="footer-title">Services</span>
+        <a class="link link-hover">Web Development</a>
+        <a class="link link-hover">UI/UX Design</a>
+        <a class="link link-hover">E-commerce Solutions</a>
+        <a class="link link-hover">SEO Optimization</a>
       </div>
       <div>
-        <div class="grid grid-flow-col gap-4">
-          <a><i class="fab fa-twitter text-2xl"></i></a>
-          <a><i class="fab fa-youtube text-2xl"></i></a>
-          <a><i class="fab fa-facebook text-2xl"></i></a>
+        <span class="footer-title">Company</span>
+        <a class="link link-hover">About me</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Testimonials</a>
+        <a class="link link-hover">Blog</a>
+      </div>
+      <div>
+        <span class="footer-title">Legal</span>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </div>
+      <div>
+        <span class="footer-title">Newsletter</span>
+        <div class="form-control w-80">
+          <label class="label">
+            <span class="label-text text-neutral-content"
+              >Enter your email address</span
+            >
+          </label>
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="username@site.com"
+              class="input input-bordered w-full pr-16"
+            />
+            <button
+              class="btn btn-primary absolute top-0 right-0 rounded-l-none"
+            >
+              Subscribe
+            </button>
+          </div>
         </div>
       </div>
     </footer>
 
+    <!-- Copyright Footer -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+      <div>
+        <p>Copyright © 2025 - All rights reserved by Muhammad Kawser</p>
+      </div>
+    </footer>
+
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+      // Initialize particles.js
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "grab",
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            push: {
+              particles_nb: 4,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+
       // Theme toggle functionality
       const themeToggle = document.getElementById("theme-toggle");
       const html = document.documentElement;
@@ -1498,6 +1524,41 @@
           }
         });
       });
+
+      // Counter animation for stats
+      const counters = document.querySelectorAll(".stat-value");
+      const speed = 200;
+
+      const animateCounters = () => {
+        counters.forEach((counter) => {
+          const target = +counter.innerText.replace("+", "");
+          const count = +counter.innerText;
+          const increment = Math.ceil(target / speed);
+
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(animateCounters, 1);
+          } else {
+            counter.innerText = target + "+";
+          }
+        });
+      };
+
+      // Start counter animation when stats section is in view
+      const statsSection = document.querySelector(".bg-primary");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounters();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(statsSection);
     </script>
   </body>
 </html>
