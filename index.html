@@ -1,101 +1,1503 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kawser-web</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Poppins:wght@200;300;400;600&family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-     <nav>
-         <div class="menu">
-             <a href="#">About</a>
-             <a href="#">Work</a>
-             <a href="#">Portfolio</a>
-             <a href="#">Contact</a>
-         </div>
-      </nav> 
-           <section>  
-                   <div class="half-width">
-                       <h1>HELLO, I'M <span class="name-highlight">MUHAMMAD KAWSER</span></h1>
-                       <p>A full stack allaround designer that placerat</p>
-                       <p>in massa consectetur</p>
-                         <br>
-                         <br>
-                       <a target="_blank" class="box-button" href="file:///C:/Web%20Development/projects/web.portfolio1/index.html">Hire Me</a>
-                    </div>
-                    <div class="half-width">
-                       <img class="img-size" src="images/pic1.png" alt="">
-                    </div>
-            </section>
-            <section>
-                   <div class="half-width">
-                      <img class="img-size" src="images/pic2.png" alt="">
-                   </div>
-                  <div class="half-width">
-                      <br>
-                    <h2>ABOUT</h2>
-                    <P>Lorem Ipsum is simply dummy text of the printing and 
-                    typesetting industry. Lorem Ipsum has been the industry's 
-                    standard dummy text ever since the 1500s, when an unknown 
-                    printer took a galley of type and scrambled it to make a type 
-                    specimen book.</P>
-                     <br>
-                     <br>
-                    <a target="_blank" class="box-button" href="https://www.youtube.com/">DOWNLOAD CV</a>
-                 </div>
-           </section>
-           <section class="bg-color">
-                 <div>
-                     <h2 id="center-highlight"><span class="name-highlight">LASTET</span> WORKING PROJECT</h2>
-                 </div>
-                 <div class="shadow-highlight single-highlight">
-                    <img id="pic-area" src="images/image 4.png" alt="">
-                    <h3>Power-x-gym (gym website)</h3>
-                    <p>Lorem Ipsum is simply dummy text of the </p>
-                    <p>printing and typesetting industry</p>
-                 </div>
-                 <div class="shadow-highlight single-highlight">
-                  <img id="pic-area" src="images/image 5.png" alt="">
-                  <h3>Creative Agency</h3>
-                  <p>Lorem Ipsum is simply dummy text of the </p>
-                  <p>printing and typesetting industry.</p>
-                </div>
-                <div class="shadow-highlight single-highlight">
-                   <img id="pic-area" src="images/image 8.png" alt="">
-                   <h3>Hard Rock Music</h3>
-                   <p>Lorem Ipsum is simply dummy text of the</p>
-                   <p>printing and typesetting industry.</p>
-                </div>
-           </section>
-           <section>
-                  <div class="container img">
-                     <img src="images/pic3.png" alt="">
-                  <div class="left">
-                     Work Inquiry
-                 </div>
-                 <div class="right">
-                     <a target="_blank" class="box-button" href="https://web.programming-hero.com/dashboard">Let's Chat</a>
-                 </div>
-                 </div>
-                    <br>
-                 <div>
-                     <p class="paragraph-center">Stay connected</p>
-                 </div>
-                 <div>
-                     <footer class="footer">
-                             <p>hello@design.com</p>
-                     </footer>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Kawser | Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Professional portfolio of Muhammad Kawser, Full Stack Developer"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <!-- Tailwind CSS and DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #4f46e5;
+        --secondary: #ec4899;
+        --dark: #1f2937;
+        --light: #f9fafb;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--dark);
+        transition: all 0.3s ease;
+      }
+
+      .dark-mode {
+        background-color: var(--dark);
+        color: var(--light);
+      }
+
+      .section-padding {
+        padding: 5rem 0;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .skill-bar {
+        transition: width 2s ease-in-out;
+      }
+
+      /* Animation classes */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .fade-in.appear {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .typewriter h1 {
+        overflow: hidden;
+        border-right: 0.15em solid var(--primary);
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: 0.15em;
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: var(--primary);
+        }
+      }
+
+      /* Glass morphism effect */
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .dark .glass {
+        background: rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <!-- Navigation Bar -->
+    <header class="fixed w-full z-50">
+      <div class="navbar glass rounded-box mx-auto mt-4 max-w-7xl">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost normal-case text-xl" href="#home"
+            >MK<span class="text-primary">.</span></a
+          >
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal p-0">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <label class="swap swap-rotate">
+            <input type="checkbox" id="theme-toggle" />
+            <svg
+              class="swap-on fill-current w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+              />
+            </svg>
+            <svg
+              class="swap-off fill-current w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+              />
+            </svg>
+          </label>
+          <a href="#contact" class="btn btn-primary ml-4">Hire Me</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen relative pt-16">
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div
+        class="hero-content text-center text-neutral-content flex flex-col justify-center min-h-screen"
+      >
+        <div class="max-w-4xl mx-auto">
+          <div class="typewriter mb-6">
+            <h1 class="text-5xl md:text-7xl font-bold">
+              HELLO, I'M <span class="text-primary">MUHAMMAD KAWSER</span>
+            </h1>
+          </div>
+          <p class="mb-8 text-xl md:text-2xl">
+            A Full Stack Developer & UI/UX Designer
+          </p>
+          <div class="animate-bounce mb-8">
+            <div class="badge badge-primary badge-outline p-4">
+              Available for Freelance
+            </div>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#portfolio" class="btn btn-primary btn-lg">View My Work</a>
+            <a href="#contact" class="btn btn-outline btn-lg text-white"
+              >Get In Touch</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+        <a href="#about" class="btn btn-circle btn-outline animate-bounce">
+          <i class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-base-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            About <span class="text-primary">Me</span>
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <div class="flex-1">
+            <div class="rounded-lg overflow-hidden shadow-2xl">
+              <img
+                src="images/pic2.png"
+                alt="Muhammad Kawser"
+                class="w-full h-auto"
+              />
+            </div>
+          </div>
+          <div class="flex-1">
+            <h3 class="text-2xl font-semibold mb-4">
+              Crafting Digital Experiences That Matter
+            </h3>
+            <p class="mb-6">
+              I'm a passionate Full Stack Developer with over 5 years of
+              experience specializing in building exceptional digital
+              experiences. My development approach focuses on performance,
+              accessibility, and clean code.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div>
+                <p><strong>Name:</strong> Muhammad Kawser</p>
+                <p><strong>Email:</strong> hello@kawser.dev</p>
+                <p><strong>Age:</strong> 28</p>
+              </div>
+              <div>
+                <p><strong>From:</strong> Dhaka, Bangladesh</p>
+                <p><strong>Availability:</strong> Available</p>
+                <p><strong>Experience:</strong> 5+ Years</p>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <h4 class="text-xl font-semibold mb-4">Skills</h4>
+              <div class="space-y-4">
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span>HTML/CSS</span>
+                    <span>95%</span>
                   </div>
-                  <div class="row-area">
-                       <img id="icon-small" src="images/image 6.png" alt="">
-                       <img id="icon-small" src="images/Group 33059.png" alt="">
-                       <img id="icon-small" src="images/image 7.png" alt="">
+                  <progress
+                    class="progress progress-primary w-full"
+                    value="95"
+                    max="100"
+                  ></progress>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span>JavaScript/TypeScript</span>
+                    <span>90%</span>
                   </div>
-           </section>
-      </body> 
+                  <progress
+                    class="progress progress-primary w-full"
+                    value="90"
+                    max="100"
+                  ></progress>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span>React</span>
+                    <span>88%</span>
+                  </div>
+                  <progress
+                    class="progress progress-primary w-full"
+                    value="88"
+                    max="100"
+                  ></progress>
+                </div>
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span>Node.js</span>
+                    <span>85%</span>
+                  </div>
+                  <progress
+                    class="progress progress-primary w-full"
+                    value="85"
+                    max="100"
+                  ></progress>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-primary mr-4"
+              ><i class="fas fa-download mr-2"></i> Download CV</a
+            >
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            My <span class="text-primary">Services</span>
+          </h2>
+          <p class="text-xl max-w-2xl mx-auto">
+            I offer a wide range of services to help you build a strong online
+            presence
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="card shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          >
+            <figure class="px-10 pt-10">
+              <div class="rounded-full bg-primary p-4 text-white">
+                <i class="fas fa-laptop-code text-3xl"></i>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h3 class="card-title">Web Development</h3>
+              <p>
+                Custom website development with modern technologies like React,
+                Vue, and Node.js for optimal performance.
+              </p>
+              <div class="card-actions mt-4">
+                <a href="#contact" class="link link-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          >
+            <figure class="px-10 pt-10">
+              <div class="rounded-full bg-secondary p-4 text-white">
+                <i class="fas fa-mobile-alt text-3xl"></i>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h3 class="card-title">Responsive Design</h3>
+              <p>
+                Creating websites that work perfectly on all devices from
+                desktops to mobile phones.
+              </p>
+              <div class="card-actions mt-4">
+                <a href="#contact" class="link link-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          >
+            <figure class="px-10 pt-10">
+              <div class="rounded-full bg-accent p-4 text-white">
+                <i class="fas fa-paint-brush text-3xl"></i>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h3 class="card-title">UI/UX Design</h3>
+              <p>
+                Designing intuitive and beautiful user interfaces that enhance
+                the user experience.
+              </p>
+              <div class="card-actions mt-4">
+                <a href="#contact" class="link link-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          >
+            <figure class="px-10 pt-10">
+              <div class="rounded-full bg-info p-4 text-white">
+                <i class="fas fa-shopping-cart text-3xl"></i>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h3 class="card-title">E-commerce Solutions</h3>
+              <p>
+                Building online stores with secure payment gateways and
+                inventory management.
+              </p>
+              <div class="card-actions mt-4">
+                <a href="#contact" class="link link-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          >
+            <figure class="px-10 pt-10">
+              <div class="rounded-full bg-success p-4 text-white">
+                <i class="fas fa-search text-3xl"></i>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h3 class="card-title">SEO Optimization</h3>
+              <p>
+                Optimizing websites to rank higher in search engines and attract
+                more visitors.
+              </p>
+              <div class="card-actions mt-4">
+                <a href="#contact" class="link link-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card shadow-xl hover:shadow-2xl transition-shadow duration-300"
+          >
+            <figure class="px-10 pt-10">
+              <div class="rounded-full bg-warning p-4 text-white">
+                <i class="fas fa-server text-3xl"></i>
+              </div>
+            </figure>
+            <div class="card-body items-center text-center">
+              <h3 class="card-title">Hosting & Maintenance</h3>
+              <p>
+                Providing reliable hosting solutions and ongoing maintenance for
+                your website.
+              </p>
+              <div class="card-actions mt-4">
+                <a href="#contact" class="link link-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding bg-base-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            My <span class="text-primary">Portfolio</span>
+          </h2>
+          <p class="text-xl max-w-2xl mx-auto">
+            Check out some of my recent projects
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div class="tabs justify-center mb-12">
+          <a class="tab tab-bordered tab-active" data-filter="all">All</a>
+          <a class="tab tab-bordered" data-filter="web">Web Development</a>
+          <a class="tab tab-bordered" data-filter="design">UI/UX Design</a>
+          <a class="tab tab-bordered" data-filter="mobile">Mobile Apps</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="portfolio-item card image-full hover:shadow-2xl transition-all duration-300"
+            data-category="web"
+          >
+            <figure>
+              <img src="images/image 4.png" alt="Power-x-gym Website" />
+            </figure>
+            <div class="card-body justify-end">
+              <h3 class="card-title">Power-x-gym Website</h3>
+              <p>Fully responsive gym website with booking system</p>
+              <div class="card-actions justify-end">
+                <a href="#" class="btn btn-primary btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item card image-full hover:shadow-2xl transition-all duration-300"
+            data-category="web"
+          >
+            <figure>
+              <img src="images/image 5.png" alt="Creative Agency" />
+            </figure>
+            <div class="card-body justify-end">
+              <h3 class="card-title">Creative Agency</h3>
+              <p>Modern agency website with portfolio showcase</p>
+              <div class="card-actions justify-end">
+                <a href="#" class="btn btn-primary btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item card image-full hover:shadow-2xl transition-all duration-300"
+            data-category="design"
+          >
+            <figure>
+              <img src="images/image 8.png" alt="Hard Rock Music" />
+            </figure>
+            <div class="card-body justify-end">
+              <h3 class="card-title">Hard Rock Music</h3>
+              <p>Music streaming platform UI/UX design</p>
+              <div class="card-actions justify-end">
+                <a href="#" class="btn btn-primary btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item card image-full hover:shadow-2xl transition-all duration-300"
+            data-category="mobile"
+          >
+            <figure>
+              <img
+                src="https://picsum.photos/400/300?random=4"
+                alt="Fitness App"
+              />
+            </figure>
+            <div class="card-body justify-end">
+              <h3 class="card-title">Fitness Tracker App</h3>
+              <p>Mobile application for tracking workouts and nutrition</p>
+              <div class="card-actions justify-end">
+                <a href="#" class="btn btn-primary btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item card image-full hover:shadow-2xl transition-all duration-300"
+            data-category="design"
+          >
+            <figure>
+              <img
+                src="https://picsum.photos/400/300?random=5"
+                alt="E-commerce Dashboard"
+              />
+            </figure>
+            <div class="card-body justify-end">
+              <h3 class="card-title">E-commerce Dashboard</h3>
+              <p>Admin dashboard for online store management</p>
+              <div class="card-actions justify-end">
+                <a href="#" class="btn btn-primary btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="portfolio-item card image-full hover:shadow-2xl transition-all duration-300"
+            data-category="web"
+          >
+            <figure>
+              <img
+                src="https://picsum.photos/400/300?random=6"
+                alt="Travel Blog"
+              />
+            </figure>
+            <div class="card-body justify-end">
+              <h3 class="card-title">Travel Blog Platform</h3>
+              <p>Blog website with interactive maps and booking system</p>
+              <div class="card-actions justify-end">
+                <a href="#" class="btn btn-primary btn-sm">View Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="#" class="btn btn-outline btn-primary">View All Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section-padding">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            Client <span class="text-primary">Testimonials</span>
+          </h2>
+          <p class="text-xl max-w-2xl mx-auto">
+            What my clients say about my work
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div class="carousel w-full rounded-box">
+          <div id="slide1" class="carousel-item relative w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+              <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <div class="flex items-center mb-4">
+                    <div class="avatar mr-4">
+                      <div class="w-12 h-12 rounded-full">
+                        <img
+                          src="https://randomuser.me/api/portraits/men/32.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-bold">Robert Johnson</h4>
+                      <p class="text-sm">CEO, TechSolutions Inc.</p>
+                    </div>
+                  </div>
+                  <p class="italic">
+                    "Muhammad delivered an exceptional website for our company.
+                    His attention to detail and communication throughout the
+                    project was impressive. Would highly recommend!"
+                  </p>
+                  <div class="rating rating-md rating-half mt-4">
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="rating-hidden"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-10"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <div class="flex items-center mb-4">
+                    <div class="avatar mr-4">
+                      <div class="w-12 h-12 rounded-full">
+                        <img
+                          src="https://randomuser.me/api/portraits/women/44.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-bold">Sarah Williams</h4>
+                      <p class="text-sm">Marketing Director, Innovate Co.</p>
+                    </div>
+                  </div>
+                  <p class="italic">
+                    "Working with Muhammad was a pleasure. He transformed our
+                    outdated website into a modern, responsive site that has
+                    significantly increased our conversion rates."
+                  </p>
+                  <div class="rating rating-md rating-half mt-4">
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="rating-hidden"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-11"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide4" class="btn btn-circle">❮</a>
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+
+          <div id="slide2" class="carousel-item relative w-full">
+            <!-- Testimonial content for slide 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+              <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <div class="flex items-center mb-4">
+                    <div class="avatar mr-4">
+                      <div class="w-12 h-12 rounded-full">
+                        <img
+                          src="https://randomuser.me/api/portraits/men/22.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-bold">Michael Chen</h4>
+                      <p class="text-sm">Founder, StartupHub</p>
+                    </div>
+                  </div>
+                  <p class="italic">
+                    "Muhammad's technical expertise and creative solutions
+                    helped us build a product that our users love. He's
+                    responsive, professional, and delivers quality work."
+                  </p>
+                  <div class="rating rating-md rating-half mt-4">
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="rating-hidden"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-12"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <div class="flex items-center mb-4">
+                    <div class="avatar mr-4">
+                      <div class="w-12 h-12 rounded-full">
+                        <img
+                          src="https://randomuser.me/api/portraits/women/32.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-bold">Jennifer Lopez</h4>
+                      <p class="text-sm">Creative Director, DesignStudio</p>
+                    </div>
+                  </div>
+                  <p class="italic">
+                    "I've worked with many developers over the years, and
+                    Muhammad stands out for his creativity and technical skills.
+                    He always goes above and beyond to deliver exceptional
+                    results."
+                  </p>
+                  <div class="rating rating-md rating-half mt-4">
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="rating-hidden"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-13"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide1" class="btn btn-circle">❮</a>
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+
+          <div id="slide3" class="carousel-item relative w-full">
+            <!-- Testimonial content for slide 3 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+              <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <div class="flex items-center mb-4">
+                    <div class="avatar mr-4">
+                      <div class="w-12 h-12 rounded-full">
+                        <img
+                          src="https://randomuser.me/api/portraits/men/52.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-bold">David Miller</h4>
+                      <p class="text-sm">Product Manager, TechGlobal</p>
+                    </div>
+                  </div>
+                  <p class="italic">
+                    "Muhammad's ability to understand our business needs and
+                    translate them into technical solutions was impressive. The
+                    website he built for us has significantly improved our
+                    online presence."
+                  </p>
+                  <div class="rating rating-md rating-half mt-4">
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="rating-hidden"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-14"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="card bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <div class="flex items-center mb-4">
+                    <div class="avatar mr-4">
+                      <div class="w-12 h-12 rounded-full">
+                        <img
+                          src="https://randomuser.me/api/portraits/women/62.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-bold">Emily Thompson</h4>
+                      <p class="text-sm">CEO, Digital Solutions Ltd.</p>
+                    </div>
+                  </div>
+                  <p class="italic">
+                    "I was blown away by the quality of work Muhammad delivered.
+                    He took the time to understand our vision and executed it
+                    perfectly. The website is not only beautiful but also highly
+                    functional."
+                  </p>
+                  <div class="rating rating-md rating-half mt-4">
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="rating-hidden"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                      checked
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-1"
+                    />
+                    <input
+                      type="radio"
+                      name="rating-15"
+                      class="bg-green-500 mask mask-star-2 mask-half-2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+            >
+              <a href="#slide2" class="btn btn-circle">❮</a>
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-padding bg-base-200">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            Latest <span class="text-primary">Blog</span> Posts
+          </h2>
+          <p class="text-xl max-w-2xl mx-auto">
+            Insights and tutorials about web development and design
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://picsum.photos/400/250?random=1"
+                alt="Blog Post"
+              />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">The Future of React in 2025</h3>
+              <p>
+                Exploring the latest features and trends in React development
+              </p>
+              <div class="card-actions justify-between items-center mt-4">
+                <div class="badge badge-outline">Web Development</div>
+                <a href="#" class="link link-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://picsum.photos/400/250?random=2"
+                alt="Blog Post"
+              />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">Designing for Accessibility</h3>
+              <p>Best practices for creating inclusive web experiences</p>
+              <div class="card-actions justify-between items-center mt-4">
+                <div class="badge badge-outline">UI/UX Design</div>
+                <a href="#" class="link link-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="https://picsum.photos/400/250?random=3"
+                alt="Blog Post"
+              />
+            </figure>
+            <div class="card-body">
+              <h3 class="card-title">Optimizing Website Performance</h3>
+              <p>Techniques to make your website load faster and smoother</p>
+              <div class="card-actions justify-between items-center mt-4">
+                <div class="badge badge-outline">Performance</div>
+                <a href="#" class="link link-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="#" class="btn btn-outline btn-primary">View All Posts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            Get In <span class="text-primary">Touch</span>
+          </h2>
+          <p class="text-xl max-w-2xl mx-auto">
+            Have a project in mind? Let's work together!
+          </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="flex-1">
+            <form id="contact-form" class="space-y-6">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Your Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  class="input input-bordered"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Your Email</span>
+                </label>
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="input input-bordered"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Subject</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  class="input input-bordered"
+                  required
+                />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Your Message</span>
+                </label>
+                <textarea
+                  class="textarea textarea-bordered h-24"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-control mt-6">
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="flex-1">
+            <div class="bg-base-200 p-8 rounded-lg">
+              <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="text-primary mr-4">
+                    <i class="fas fa-map-marker-alt text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">Location</h4>
+                    <p>Dhaka, Bangladesh</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="text-primary mr-4">
+                    <i class="fas fa-envelope text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">Email</h4>
+                    <p>hello@kawser.dev</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="text-primary mr-4">
+                    <i class="fas fa-phone text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">Phone</h4>
+                    <p>+880 1234 567890</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div class="text-primary mr-4">
+                    <i class="fas fa-clock text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold">Working Hours</h4>
+                    <p>Mon - Fri: 9AM - 6PM</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8">
+                <h4 class="font-semibold mb-4">Follow Me</h4>
+                <div class="flex space-x-4">
+                  <a href="#" class="btn btn-circle btn-outline">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="btn btn-circle btn-outline">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="btn btn-circle btn-outline">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="#" class="btn btn-circle btn-outline">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="#" class="btn btn-circle btn-outline">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-primary text-primary-content">
+      <div>
+        <div class="avatar">
+          <div
+            class="w-24 rounded-full ring ring-accent ring-offset-base-100 ring-offset-2"
+          >
+            <img src="images/pic1.png" />
+          </div>
+        </div>
+        <p class="font-bold text-2xl mt-4">
+          Muhammad Kawser <br />Full Stack Developer
+        </p>
+        <p>Copyright © 2025 - All rights reserved</p>
+      </div>
+      <div>
+        <div class="grid grid-flow-col gap-4">
+          <a><i class="fab fa-twitter text-2xl"></i></a>
+          <a><i class="fab fa-youtube text-2xl"></i></a>
+          <a><i class="fab fa-facebook text-2xl"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.getElementById("theme-toggle");
+      const html = document.documentElement;
+
+      // Check for saved theme preference or respect OS preference
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+          !localStorage.getItem("theme"))
+      ) {
+        html.setAttribute("data-theme", "dark");
+        themeToggle.checked = true;
+      }
+
+      themeToggle.addEventListener("change", function () {
+        if (this.checked) {
+          html.setAttribute("data-theme", "dark");
+          localStorage.setItem("theme", "dark");
+        } else {
+          html.setAttribute("data-theme", "light");
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Scroll animations
+      const faders = document.querySelectorAll(".fade-in");
+
+      const appearOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -100px 0px",
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (
+        entries,
+        appearOnScroll
+      ) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add("appear");
+            appearOnScroll.unobserve(entry.target);
+          }
+        });
+      },
+      appearOptions);
+
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+      });
+
+      // Portfolio filtering
+      const filterButtons = document.querySelectorAll("[data-filter]");
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+      filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          // Update active state
+          filterButtons.forEach((btn) => btn.classList.remove("tab-active"));
+          button.classList.add("tab-active");
+
+          const filter = button.getAttribute("data-filter");
+
+          portfolioItems.forEach((item) => {
+            if (
+              filter === "all" ||
+              item.getAttribute("data-category") === filter
+            ) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Form submission
+      const contactForm = document.getElementById("contact-form");
+
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Simulate form submission
+        const submitBtn = this.querySelector('button[type="submit"]');
+        submitBtn.innerHTML = "Sending...";
+        submitBtn.disabled = true;
+
+        setTimeout(() => {
+          alert("Message sent successfully! I will get back to you soon.");
+          contactForm.reset();
+          submitBtn.innerHTML = "Send Message";
+          submitBtn.disabled = false;
+        }, 1500);
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
