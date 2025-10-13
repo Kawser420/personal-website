@@ -75,8 +75,6 @@ Prerequisites: a modern browser. To run locally:
 
 - git clone https://github.com/Kawser420/demo-personal-website.git
 
-```
-
 ### Customization Guide
 
 - Replace the name, email and personal details in the About section of `index.html`.
@@ -123,4 +121,7 @@ If you'd like help customizing this template, or want to hire, use the contact l
 ---
 
 Made with love — a clean, responsive portfolio template for showcasing modern web skills.
+
+```
+
 ```
